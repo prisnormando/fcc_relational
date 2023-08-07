@@ -1,17 +1,5 @@
 #!/bin/bash
 
-# CREATE DATABASE worldcup;
-# \c worldcup
-
-# CREATE TABLE teams(team_id SERIAL PRIMARY KEY, 
-# name UNIQUE NOT NULL VARCHAR(15));
-
-# CREATE TABLE games(game_id SERIAL PRIMARY KEY, 
-# year INT NOT NULL, round VARCHAR(50) NOT NULL, 
-# winner_id INT FOREIGN KEY REFERENCES teams(team_id),
-# opponent_id INT FOREIGN KEY REFERENCES teams(team_id),
-# winner_goals INT NOT NULL, opponent_goals INT NOT NULL);
-
 if [[ $1 == "test" ]]
 then
   PSQL="psql --username=postgres --dbname=worldcuptest -t --no-align -c"
